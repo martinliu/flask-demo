@@ -13,6 +13,7 @@ stage 'Push'
 node("master") {
    echo 'Push new build to registory'
     sh 'docker push localhost:5000/python-redis-demo:b${BUILD_NUMBER}'
+    sh 'docker rmi localhost:5000/python-redis-demo:b${BUILD_NUMBER}'
 }
 
 stage 'RegSrvPot'
