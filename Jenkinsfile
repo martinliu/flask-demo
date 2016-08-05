@@ -17,7 +17,7 @@ node("master") {
 
 stage 'RegSrvPot'
 node("master") {
-   echo 'Registry a new port for testing
+   echo 'Registry a new port for testing'
    dir('./test-build') {
     // change port and build for docker-compose.yml file
     sh 'sh ./test-build.sh'
