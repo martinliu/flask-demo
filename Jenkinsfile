@@ -33,5 +33,3 @@ node("master") {
     sh '/Users/martin/bin/rancher-compose --url http://192.168.99.102:8080 --access-key 0F7DD2AE7DF85934B443 --secret-key YmpQjsxt5PrPXxPR99GMUkLRvud8vyNz3DLrsqVR -p flask-demo-build${BUILD_NUMBER} up -d'
 }
 }
-
-
