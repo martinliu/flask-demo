@@ -1,8 +1,8 @@
 #!/bin/sh
-cd ${WORKSPACE}/src
-docker build -t 121.199.10.99:81/python-redis-demo:b${BUILD_NUMBER} .
-docker push 121.199.10.99:81/python-redis-demo:b${BUILD_NUMBER}
-cd ${WORKSPACE}/test-build
+#cd ${WORKSPACE}/src
+#docker build -t 121.199.10.99:81/python-redis-demo:b${BUILD_NUMBER} .
+#docker push 121.199.10.99:81/python-redis-demo:b${BUILD_NUMBER}
+#cd ${WORKSPACE}/test-build
 sed -i 's/\$\$BUILD_NUMBER\$\$/'${BUILD_NUMBER}'/g' docker-compose.yml
 sed -i 's/\$\$PORT_NUMBER\$\$/'`expr 5000 + ${BUILD_NUMBER}`'/g' docker-compose.yml
 #chmod 777 ./rancher-compose
